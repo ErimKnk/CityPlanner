@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1449</width>
+    <height>674</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="6" column="0">
+     <widget class="QPushButton" name="pushButton_FindCity">
+      <property name="text">
+       <string>Find City</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="0">
+     <widget class="QCheckBox" name="checkBoxShowList">
+      <property name="text">
+       <string>Show List</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="1" alignment="Qt::AlignBottom">
+     <widget class="QListWidget" name="listWidgetStreets"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="pushButtonFillMap">
+      <property name="text">
+       <string>Fill Map</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QPushButton" name="pushButtonStreets">
+      <property name="text">
+       <string>Show Streets</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="1" alignment="Qt::AlignRight">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Green Road -&gt; 50</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QPushButton" name="findPath">
+      <property name="text">
+       <string>Find Shortest Path</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="1" rowspan="14">
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="pushButtonAddStreet">
+      <property name="text">
+       <string>Add Street</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="pushButton_Random">
+      <property name="text">
+       <string>Random</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="0">
+     <widget class="QCheckBox" name="checkBoxShowTests">
+      <property name="text">
+       <string>Show Tests</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="1" alignment="Qt::AlignRight|Qt::AlignBottom">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Purple Road -&gt; 130</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="pushButton_add_city">
+      <property name="text">
+       <string>Add City</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="pushButton_teste_was">
+      <property name="text">
+       <string>Add 4</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLineEdit" name="line_edit_test"/>
+    </item>
+    <item row="9" column="0">
+     <widget class="QPushButton" name="pushButtonTime">
+      <property name="text">
+       <string>Find Fastest Path</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1449</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuInfo">
+    <property name="title">
+     <string>Info</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuScene">
+    <property name="title">
+     <string>Scene</string>
+    </property>
+    <addaction name="actionClear_Scene"/>
+    <addaction name="actionClear_Dots_And_Lines"/>
+    <addaction name="actionDelete_Cities"/>
+   </widget>
+   <widget class="QMenu" name="menuTastes">
+    <property name="title">
+     <string>Tastes</string>
+    </property>
+    <addaction name="actionAdd_And_Draw_Street"/>
+    <addaction name="actionAdd_City_With_Map"/>
+    <addaction name="actionCity_Taste"/>
+    <addaction name="actionDraw_City_Map"/>
+    <addaction name="actiontestAbstractMap"/>
+    <addaction name="actiontestShowDialog"/>
+    <addaction name="actiontestShortestPath"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuInfo"/>
+   <addaction name="menuScene"/>
+   <addaction name="menuTastes"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+E</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionClear_Scene">
+   <property name="text">
+    <string>Clear Scene</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+S</string>
+   </property>
+  </action>
+  <action name="actionAdd_And_Draw_Street">
+   <property name="text">
+    <string>Add And Draw Street</string>
+   </property>
+  </action>
+  <action name="actionAdd_City_With_Map">
+   <property name="text">
+    <string>Add City With Map</string>
+   </property>
+  </action>
+  <action name="actionCity_Taste">
+   <property name="text">
+    <string>City Taste</string>
+   </property>
+  </action>
+  <action name="actionDraw_City_Map">
+   <property name="text">
+    <string>Draw City Map</string>
+   </property>
+  </action>
+  <action name="actiontestAbstractMap">
+   <property name="text">
+    <string>testAbstractMap</string>
+   </property>
+  </action>
+  <action name="actiontestShowDialog">
+   <property name="text">
+    <string>testShowDialog</string>
+   </property>
+  </action>
+  <action name="actiontestShortestPath">
+   <property name="text">
+    <string>testShortestPath</string>
+   </property>
+  </action>
+  <action name="actionClear_Dots_And_Lines">
+   <property name="text">
+    <string>Clear Dots And Lines</string>
+   </property>
+  </action>
+  <action name="actionDelete_Cities">
+   <property name="text">
+    <string>Delete Cities</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
